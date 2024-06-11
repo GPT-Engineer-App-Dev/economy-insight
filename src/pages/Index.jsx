@@ -1,9 +1,11 @@
-import { Box, Container, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Text, VStack, useColorModeValue } from "@chakra-ui/react";
 import { FaAd } from "react-icons/fa";
 
 const Index = () => {
+  const bgColor = useColorModeValue("background", "gray.800");
+
   return (
-    <Container maxW="container.xl" p={4}>
+    <Container maxW="container.xl" p={4} bg={bgColor}>
       <Flex direction="column" align="center" mb={8}>
         <Heading as="h1" size="2xl" mb={4}>
           Financial Times
