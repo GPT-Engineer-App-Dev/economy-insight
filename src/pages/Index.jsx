@@ -1,18 +1,54 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Box, Container, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import { FaAd } from "react-icons/fa";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
-      </VStack>
+    <Container maxW="container.xl" p={4}>
+      <Flex direction="column" align="center" mb={8}>
+        <Heading as="h1" size="2xl" mb={4}>
+          Financial Times
+        </Heading>
+        <Text fontSize="lg" color="gray.600">
+          Your trusted source for financial news and analysis
+        </Text>
+      </Flex>
+      <Flex>
+        <Box flex="3" p={4}>
+          <VStack spacing={4} align="stretch">
+            <Box p={4} shadow="md" borderWidth="1px">
+              <Heading as="h2" size="lg" mb={2}>
+                Article 1
+              </Heading>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+              </Text>
+            </Box>
+            <Box p={4} shadow="md" borderWidth="1px">
+              <Heading as="h2" size="lg" mb={2}>
+                Article 2
+              </Heading>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+              </Text>
+            </Box>
+          </VStack>
+        </Box>
+        <Box flex="1" p={4} ml={4} shadow="md" borderWidth="1px">
+          <Heading as="h2" size="lg" mb={4}>
+            Sidebar
+          </Heading>
+          <VStack spacing={4} align="stretch">
+            <Box p={4} shadow="md" borderWidth="1px" display="flex" alignItems="center">
+              <FaAd size="24px" />
+              <Text ml={2}>Advertisement 1</Text>
+            </Box>
+            <Box p={4} shadow="md" borderWidth="1px" display="flex" alignItems="center">
+              <FaAd size="24px" />
+              <Text ml={2}>Advertisement 2</Text>
+            </Box>
+          </VStack>
+        </Box>
+      </Flex>
     </Container>
   );
 };
